@@ -1,8 +1,10 @@
 {
   "name": "slackStatus",
   "version": "1.0.0",
+  "description": "NPM module to import Slack system information data",
+  "author": "hangyeol0531",
   "scripts": {
-    "start:dev": "ts-node src/index.ts"
+    "start:dev": "ts-node src/slack-status/index.ts"
   },
   "dependencies": {
     "axios": "^1.2.0"
