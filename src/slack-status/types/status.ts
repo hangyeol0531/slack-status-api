@@ -1,4 +1,4 @@
-export type slackStatusTitle =
+export type SlackStatusTitle =
     'Login/SSO' |
     'Connections' |
     'Messaging' |
@@ -8,19 +8,19 @@ export type slackStatusTitle =
     'Calls' |
     'Search' |
     'Apps/Integrations/APIs' |
-    'Workspace/Org Administration'
+    'Workspace/Org Administration';
 
 export const slackTypeMap = {
-    'TableCheck.png': 'No Issue',
-    'TableMaintenance.png': 'Maintenance',
-    'TableNotice.png': 'Notice',
-    'TableIncident.png': 'Incident',
-    'TableOutage.png': 'Outage',
+  'TableCheck.png': 'No Issue',
+  'TableMaintenance.png': 'Maintenance',
+  'TableNotice.png': 'Notice',
+  'TableIncident.png': 'Incident',
+  'TableOutage.png': 'Outage',
 } as const;
 
-export type slackStatusPng = keyof typeof slackTypeMap;
+export type SlackStatusPng = keyof typeof slackTypeMap;
 
 export interface SlackType {
-    name: slackStatusTitle,
-    status: typeof slackTypeMap[slackStatusPng],
+  name: SlackStatusTitle,
+  status: typeof slackTypeMap[SlackStatusPng],
 }

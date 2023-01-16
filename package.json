@@ -1,12 +1,24 @@
 {
-  "name": "slackStatus",
+  "name": "slack-status-api",
   "version": "1.0.0",
   "description": "NPM module to import Slack system information data",
   "author": "hangyeol0531",
   "scripts": {
-    "start:dev": "ts-node src/slack-status/index.ts"
+    "start:dev": "ts-node src/slack-status/index.ts",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.4",
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.4",
+    "typescript": "^4.9.4"
   }
 }

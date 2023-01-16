@@ -1,1 +1,1 @@
-export * from './slack-status/index';
+export * from './slack-status';
