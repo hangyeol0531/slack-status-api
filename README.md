@@ -16,6 +16,5 @@ import { getSlackStatus } from 'slack-status-api';
 })()
 ```
 
-### npm
-<hr>
+# npm
 https://www.npmjs.com/package/slack-status-api?activeTab=readme
