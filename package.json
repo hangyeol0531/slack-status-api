@@ -2,7 +2,15 @@
   "name": "slack-status-api",
   "version": "1.0.0",
   "description": "NPM module to import Slack system information data",
-  "author": "hangyeol0531",
+  "author": "hangyeol0531 <jhan0531@naver.com>",
+  "keywords": ["slack", "slack-status"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hangyeol0531/slack-status-api.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
   "scripts": {
     "start:dev": "ts-node src/slack-status/index.ts",
     "build": "tsc -p tsconfig.json",
