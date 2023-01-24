@@ -22,6 +22,12 @@
     "import/extensions": "off",
     "import/prefer-default-export": "off",
     "react/jsx-filename-extension": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 150
+      }
+    ],
     "eol-last": 0
   },
   "ignorePatterns": [

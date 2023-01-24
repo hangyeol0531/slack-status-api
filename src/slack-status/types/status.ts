@@ -20,6 +20,8 @@ export const slackTypeMap = {
 
 export type SlackStatusPng = keyof typeof slackTypeMap;
 
+export type SlackStatusRegexList = (SlackStatusTitle | SlackStatusPng)[];
+
 export interface SlackType {
   name: SlackStatusTitle,
   status: typeof slackTypeMap[SlackStatusPng],
