@@ -1,8 +1,7 @@
 import axios from 'axios';
 import {
-  slackTypeMap, SlackType, SlackStatusTitle, SlackStatusPng,
+  slackTypeMap, SlackType, SlackStatusTitle, SlackStatusPng, SlackStatusRegexList,
 } from '../types/status';
-import { SlackStatusRegexList } from '../types/status';
 
 export default class SlackClient {
   private static url = 'https://status.slack.com/';
