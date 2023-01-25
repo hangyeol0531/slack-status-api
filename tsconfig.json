@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2016",
+    "removeComments": true,
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -9,6 +10,6 @@
     "skipLibCheck": true,
     "declaration": true,
     "outDir": "./dist",
-    "baseUrl": "./"
+    "baseUrl": "./",
   }
 }
