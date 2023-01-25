@@ -1,4 +1,4 @@
-import { getSlackStatus } from '../getSlackStatus';
+import { getSlackStatus } from '../src/slack-status/getSlackStatus';
 
 describe('slack-status-api', () => {
   it('should have a getSlackStatus function', () => {

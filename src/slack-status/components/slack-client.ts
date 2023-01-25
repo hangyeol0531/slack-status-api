@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {
-  slackTypeMap, SlackType, SlackStatusTitle, SlackStatusPng, SlackStatusRegexList,
+  slackTypeMap, SlackStatusTitle, SlackStatusPng, SlackStatusRegexList, SlackStatus,
 } from '../types/status';
 
 export default class SlackClient {
@@ -20,14 +20,13 @@ export default class SlackClient {
     return this.parseSlackData(data);
   }
 
-  private static async parseSlackData(data: string): Promise<SlackType[]> {
+  private static async parseSlackData(data: string): Promise<SlackStatus> {
     const dataRegexList: SlackStatusRegexList = data.match(this.statusRegex) as SlackStatusRegexList;
-    const result: SlackType[] = [];
+    const result: SlackStatus = {} as SlackStatus;
     for (let i = 5; i < dataRegexList.length; i += 2) {
-      result.push({
-        name: dataRegexList[i] as SlackStatusTitle,
-        status: slackTypeMap[dataRegexList[i + 1] as SlackStatusPng],
-      });
+      const name = dataRegexList[i] as SlackStatusTitle;
+      const status = slackTypeMap[dataRegexList[i + 1] as SlackStatusPng];
+      result[name] = { status };
     }
     return result;
   }

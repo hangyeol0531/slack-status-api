@@ -19,10 +19,13 @@ export const slackTypeMap = {
 } as const;
 
 export type SlackStatusPng = keyof typeof slackTypeMap;
+export type SlackStatusType = typeof slackTypeMap[SlackStatusPng];
 
 export type SlackStatusRegexList = (SlackStatusTitle | SlackStatusPng)[];
 
-export interface SlackType {
-  name: SlackStatusTitle,
-  status: typeof slackTypeMap[SlackStatusPng],
+export type SlackStatus = {
+  // eslint-disable-next-line no-unused-vars
+  [key in SlackStatusTitle]: {
+    status: SlackStatusType
+  }
 }
