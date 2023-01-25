@@ -4,3 +4,4 @@ describe('slack-client', () => {
   it('should have a slack-client', () => {
     expect(typeof SlackClient).toBe('function');
   });
+});
