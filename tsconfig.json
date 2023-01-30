@@ -4,12 +4,13 @@
     "removeComments": true,
     "module": "commonjs",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,
     "skipLibCheck": true,
     "declaration": true,
     "outDir": "./dist",
-    "baseUrl": "./",
+    "baseUrl": "./"
   }
 }
