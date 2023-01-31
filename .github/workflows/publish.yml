@@ -13,7 +13,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 16.x
-        registry-url: https://registry.npmjs.org/slack-status-api/
+        registry-url: https://registry.npmjs.org/
     - name: npm ci
       run: npm ci
     - name: slack-status test
