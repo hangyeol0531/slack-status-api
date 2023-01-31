@@ -8,14 +8,20 @@ jobs:
   publish:
     runs-on: ubuntu-latest
   steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup Node
+      uses: actions/setup-node@v2
       with:
         node-version: 16.x
-        registry-url: https://registry.npmjs.org/slack-status-api
-    - run: npm ci
-    - run: npm run test
-    - run: npm run build
-    - run: npm publish
+        registry-url: https://registry.npmjs.org/slack-status-api/
+    - name: npm ci
+      run: npm ci
+    - name: slack-status test
+      run: npm run test
+    - name: slack-status build
+      run: npm run build
+    - name: publish package to npm
+      run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
