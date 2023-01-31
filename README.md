@@ -7,7 +7,7 @@ Using npm
 $ npm install slack-status-api
 ```
 # Example
-import the library using the import
+##### import the library using the import
 ```typescript
 import { getSlackStatus } from 'slack-status-api';
 
@@ -16,7 +16,7 @@ import { getSlackStatus } from 'slack-status-api';
   console.log(data);
 })()
 ```
-result
+##### result
 ```json
 {
   "Login/SSO": { "status": "No Issue" },
