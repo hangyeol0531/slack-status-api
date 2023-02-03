@@ -1,6 +1,6 @@
 {
   "name": "slack-status-api",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "NPM module to import Slack system information data",
   "author": "hangyeol0531 <jhan0531@naver.com>",
   "keywords": [
