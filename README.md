@@ -38,16 +38,13 @@ Status can be **No Issue, Maintenance, Notice, Incident, Outage**, total of 5
   "Messaging": {
     "status": "No Issue"
   },
-  "Link Previews": {
-    "status": "No Issue"
-  },
-  "Posts/Files": {
+  "Files": {
     "status": "No Issue"
   },
   "Notifications": {
     "status": "No Issue"
   },
-  "Calls": {
+  "Huddles": {
     "status": "No Issue"
   },
   "Search": {
@@ -57,6 +54,12 @@ Status can be **No Issue, Maintenance, Notice, Incident, Outage**, total of 5
     "status": "No Issue"
   },
   "Workspace/Org Administration": {
+    "status": "No Issue"
+  },
+  "Workflows": {
+    "status": "No Issue"
+  },
+  "Canvases": {
     "status": "No Issue"
   }
 }

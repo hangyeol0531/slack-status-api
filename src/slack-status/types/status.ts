@@ -2,13 +2,14 @@ export type SlackStatusTitle =
     'Login/SSO' |
     'Connections' |
     'Messaging' |
-    'Link Previews' |
-    'Posts/Files' |
+    'Files' |
     'Notifications' |
-    'Calls' |
+    'Huddles' |
     'Search' |
     'Apps/Integrations/APIs' |
-    'Workspace/Org Administration';
+    'Workspace/Org Administration' |
+    'Workflows'|
+    'Canvases';
 
 export const slackTypeMap = {
   'TableCheck.png': 'No Issue',
