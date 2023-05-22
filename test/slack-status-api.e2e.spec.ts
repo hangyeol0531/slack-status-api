@@ -1,7 +1,7 @@
-import { getSlackStatus } from '../src';
-import noIssueHtml from './data/noIssueHtml.json';
-import noIssue from './data/noIssue.json';
 import axios from 'axios';
+import { getSlackStatus } from '../src';
+import noIssueHtml from './data/noIssue-html.json';
+import noIssue from './data/noIssue-result.json';
 
 jest.mock('axios');
 const mockedAxios = axios as jest.Mocked<typeof axios>;

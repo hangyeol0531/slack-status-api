@@ -1,6 +1,8 @@
 import axios from 'axios';
-import noIssueHtml from '../data/noIssueHtml.json';
-import noIssue from '../data/noIssue.json';
+import noIssueHtml from '../data/noIssue-html.json';
+import noIssueResult from '../data/noIssue-result.json';
+import messingIncidentHtml from '../data/messaging-incident-html.json';
+import messingIncidentResult from '../data/messaging-incident-result.json';
 import SlackClient from '../../src/slack-status/components/slack-client';
 
 jest.mock('axios');
@@ -17,6 +19,11 @@ describe('slack-client', () => {
 
   it('should return noIssue status result', async () => {
     mockedAxios.get.mockResolvedValue(noIssueHtml);
-    expect(await SlackClient.getSlackStatus()).toStrictEqual(noIssue);
+    expect(await SlackClient.getSlackStatus()).toStrictEqual(noIssueResult);
+  });
+
+  it('should return Messaging Incident status result', async () => {
+    mockedAxios.get.mockResolvedValue(messingIncidentHtml);
+    expect(await SlackClient.getSlackStatus()).toStrictEqual(messingIncidentResult);
   });
 });
