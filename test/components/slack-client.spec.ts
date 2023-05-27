@@ -16,7 +16,7 @@ describe('slack-client', () => {
   });
 
   it('should have a slack-client getSlackStatus', () => {
-    expect(typeof SlackClient).toBe('function');
+    expect(typeof SlackClient.getSlackStatus).toBe('function');
   });
 
   it('should return noIssue status result', async () => {
