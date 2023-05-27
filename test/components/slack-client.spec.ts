@@ -3,6 +3,8 @@ import noIssueHtml from '../data/noIssue-html.json';
 import noIssueResult from '../data/noIssue-result.json';
 import messingIncidentHtml from '../data/messaging-incident-html.json';
 import messingIncidentResult from '../data/messaging-incident-result.json';
+import workflowsIncidentHtml from '../data/workflows-incident-html.json';
+import workflowsIncidentResult from '../data/workflows-incident-result.json';
 import SlackClient from '../../src/slack-status/components/slack-client';
 
 jest.mock('axios');
@@ -25,5 +27,10 @@ describe('slack-client', () => {
   it('should return Messaging Incident status result', async () => {
     mockedAxios.get.mockResolvedValue(messingIncidentHtml);
     expect(await SlackClient.getSlackStatus()).toStrictEqual(messingIncidentResult);
+  });
+
+  it('should return Workflows Incident status result', async () => {
+    mockedAxios.get.mockResolvedValue(workflowsIncidentHtml);
+    expect(await SlackClient.getSlackStatus()).toStrictEqual(workflowsIncidentResult);
   });
 });
