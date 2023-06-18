@@ -1,0 +1,35 @@
+{
+  "Login/SSO": {
+    "status": "No Issue"
+  },
+  "Connections": {
+    "status": "Incident"
+  },
+  "Messaging": {
+    "status": "Incident"
+  },
+  "Files": {
+    "status": "No Issue"
+  },
+  "Notifications": {
+    "status": "No Issue"
+  },
+  "Huddles": {
+    "status": "No Issue"
+  },
+  "Search": {
+    "status": "No Issue"
+  },
+  "Apps/Integrations/APIs": {
+    "status": "Incident"
+  },
+  "Workspace/Org Administration": {
+    "status": "No Issue"
+  },
+  "Workflows": {
+    "status": "Incident"
+  },
+  "Canvases": {
+    "status": "No Issue"
+  }
+}
