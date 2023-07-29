@@ -7,8 +7,8 @@ import workflowsIncidentHtml from '../data/workflows-incident-html.json';
 import workflowsIncidentResult from '../data/workflows-incident-result.json';
 import _230615IncidentHtml from '../data/230615-issue-html.json';
 import _230615IncidentResult from '../data/230615-issue-result.json';
-import _230727IncidentHtml from '../data/230727-issue-html.json';
-import _230727IncidentResult from '../data/230727-issue-result.json';
+import _230727OutageHtml from '../data/230727-issue-html.json';
+import _230727OutageResult from '../data/230727-issue-result.json';
 import SlackClient from '../../src/slack-status/components/slack-client';
 
 jest.mock('axios');
@@ -44,7 +44,7 @@ describe('slack-client', () => {
   });
 
   it('should return Messaging, Search, Connections, Workflows Outage status result', async () => {
-    mockedAxios.get.mockResolvedValue(_230727IncidentHtml);
-    expect(await SlackClient.getSlackStatus()).toStrictEqual(_230727IncidentResult);
+    mockedAxios.get.mockResolvedValue(_230727OutageHtml);
+    expect(await SlackClient.getSlackStatus()).toStrictEqual(_230727OutageResult);
   });
 });
